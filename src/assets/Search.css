@@ -1,0 +1,84 @@
+.main-search {
+    width: 100%;
+    height: 100vh;
+}
+
+.image-div {
+    background-image: url('../assets//Accra_Central_Accra.png');
+    /* background: rgba(205, 182, 182, 0.003); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 278px;
+
+}
+
+.input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.checkForBirth {
+    border-radius: 17.791px;
+    border: 0.445px solid #E6E6E6;
+    background: #DEF5EC;
+    box-shadow: 0px 0px 11.56395149230957px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    width: 280.203px;
+    height: 69.384px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.checkForDeath{
+    border-radius: 17.791px;
+    border: 0.445px solid #E6E6E6;
+    background: #FFF;
+    box-shadow: 0px 0px 11.56395149230957px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    width: 280.203px;
+    height: 69.384px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.full-box {
+    border-radius: 26.686px;
+    background: #FAF8F8;
+    /* width: 612px; */
+    /* height: 88.064px; */
+    padding: 10px;
+    justify-content: center;
+    /* align-items: flex-start; */
+    /* gap: 20.122px; */
+}
+
+.form-input{
+border-radius: 5px;
+border: 0.5px solid rgba(0, 106, 62, 0.20);
+background: #DEF5EC;
+
+}
+
+.input-verify{
+    border-radius: 7px;
+border: 1px solid #98F5D2;
+background: #FFF;
+display: flex;
+width: 351px;
+padding: 17px 12px;
+align-items: center;
+gap: 10px;
+}
+
+.button-verify{
+    border-radius: 10px;
+    
+}
