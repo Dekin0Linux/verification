@@ -15,7 +15,7 @@ function Cert({ selectedData }) {
           className="col-12 col-md-8 border"
           style={{ backgroundColor: "#e2fff4" }}
         >
-          <div className="row py-md-4 title-item align-items-center">
+          <div className="row py-5 title-item align-items-center">
             <div className="idNumbar col-3 ">
               <p className="data-text text-center">
                 A<span className="data-code">{selectedData.code_A}</span>
@@ -46,7 +46,7 @@ function Cert({ selectedData }) {
               Entry No: {selectedData.entry_no}
             </div>
             <div className="col-md-6  col-8 border entry-num fw-bold p-2">
-              Registry:{selectedData.registry}
+              Registry:  {selectedData.registry}
             </div>
           </div>
 
@@ -57,10 +57,10 @@ function Cert({ selectedData }) {
             <div className="col-6 col-xs-4 border Name-text p-2">
               {selectedData.child_name}
             </div>
-            <div className="col-3 col-xs-3 m-0 p-0">
-              <div className="fw-bold border p-2">Sex</div>
+            <div className="col-3 col-xs-3 m-0 p-0 border">
+              <div className="fw-bold border-bottom p-2">Sex</div>
               {/* <hr /> */}
-              <div className="Gen-text border p-2">{selectedData.sex}</div>
+              <div className="Gen-text p-2">{selectedData.sex}</div>
             </div>
           </div>
           <div className="row align-items-center">
