@@ -27,7 +27,12 @@ function Search() {
     //     }
     // });
 
-    fetch("/birth.json")
+    fetch("../birth.json",{
+      headers:{
+        accept: 'application/json',
+        'User-agent': 'learning app',
+      }
+    })
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
