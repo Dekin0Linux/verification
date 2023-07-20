@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
+import Buttons from "./Buttons";
 
 function SearchDeath() {
   const [code, setCode] = useState("");
@@ -17,7 +18,12 @@ function SearchDeath() {
         if (user) {
           navigate(`/verify/${code}`);
         } else {
-          alert("Invalid Code!");
+          swal({
+            title: "Invalid Number",
+            text: "Please check your number and try again",
+            icon: "error",
+            button: "Cancel",
+          });
         }
       });
   };
@@ -39,30 +45,17 @@ function SearchDeath() {
 
         <div className="input-div py-md-3 py-2 d-flex justify-content-center align-items-center">
           <div className="switchCard px-2 ">
-            <div
-              className="row py-4 rounded g-0 g-2 p-2"
-              style={{ background: "#FAF8F8" }}
-            >
-              <div className="col-6">
-                <div className="bg-white p-md-4 p-3 btns rounded shadow text-center btn-1" onClick={()=>navigate('/birth')}>
-                  Check for Birth
-                </div>
-              </div>
-
-              <div className="col-6">
-                <div className="bg-white p-md-4 p-3 btns btn-2 rounded text-center border">
-                  Check for Death
-                </div>
-              </div>
-            </div>
+            <Buttons />
 
             {/* form container */}
-            <div className="p-4 m-0 p-0 mt-3 rounded" style={{background:"#2E2C26",color:"white"}}>
+            <div
+              className="p-4 m-0 p-0 mt-3 rounded"
+              style={{ background: "#2E2C26", color: "white" }}
+            >
               <div>
                 <h5 className="mb-0">Birth Certificate Verification System</h5>
                 <small className="fs-5 text-white p-0 m-0">
-                  Death Certificate Verification System
-                  details below
+                  Death Certificate Verification System details below
                 </small>
 
                 <div className="py-md-3 py-2">
@@ -83,6 +76,7 @@ function SearchDeath() {
                         <button
                           type="submit"
                           className="w-100 m-0 p-0 p-2 verify-btn text-white fw-bold rounded"
+                          style={{background:'#EA5E5E'}}
                         >
                           Verify
                         </button>
@@ -100,7 +94,7 @@ function SearchDeath() {
                 </p>
                 <button
                   className="w-100 text-white rounded fw-bold lead"
-                  style={{ background: "#427561" }}
+                  style={{ background: "#EA5E5E" }}
                 >
                   Scan QR Code
                 </button>
@@ -110,16 +104,19 @@ function SearchDeath() {
                 <p className="text-center">Or</p>
                 <button
                   className="w-100 text-white rounded fw-bold lead m-0"
-                  style={{ background: "#427561" }}
+                  style={{ background: "#EA5E5E" }}
                 >
                   Scan Finger Print
                 </button>
-                <p className=" text-muted">
+                <p className=" text-white">
                   Having issues? Contact our customer service for more details.
                 </p>
               </div>
 
-              <p className="text-center text-muted"> &amp;copyrights 2023 - GHANA.GOV</p>
+              <p className="text-center text-white">
+                {" "}
+                &amp;copyrights 2023 - GHANA.GOV
+              </p>
             </div>
           </div>
         </div>
