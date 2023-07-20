@@ -24,7 +24,7 @@ function Doc() {
     })
   }
   return (
-    <div className='container-lg p-md-3'>
+    <div className='container-lg p-md-3 p-2'>
         <Cert selectedData={cert}/>
     </div>
   )

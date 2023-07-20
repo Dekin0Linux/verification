@@ -1,6 +1,13 @@
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .main-search {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+
 }
 
 .image-div {
@@ -11,7 +18,6 @@
     background-size: cover;
     width: 100%;
     height: 278px;
-
 }
 
 .input-div {
@@ -35,7 +41,7 @@
     flex-shrink: 0;
 }
 
-.checkForDeath {
+.checkForDeath{
     border-radius: 17.791px;
     border: 0.445px solid #E6E6E6;
     background: #FFF;
@@ -60,31 +66,25 @@
     /* gap: 20.122px; */
 }
 
-.form-input {
-    border-radius: 5px;
-    border: 0.5px solid rgba(0, 106, 62, 0.20);
-    background: #DEF5EC;
+.form-input{
+border-radius: 5px;
+border: 0.5px solid rgba(0, 106, 62, 0.20);
+background: #DEF5EC;
 
 }
 
-.input-verify {
+.input-verify{
     border-radius: 7px;
-    border: 1px solid #98F5D2;
-    background: #FFF;
-    display: flex;
-    width: 351px;
-    padding: 17px 12px;
-    align-items: center;
-    gap: 10px;
+border: 1px solid #98F5D2;
+background: #FFF;
+display: flex;
+width: 351px;
+padding: 17px 12px;
+align-items: center;
+gap: 10px;
 }
 
-.button-verify {
+.button-verify{
     border-radius: 10px;
-    background: #427561;
-    display: flex;
-    width: 140px;
-    padding: 15px 48px 16px 46px;
-    justify-content: center;
-    align-items: center;
     
 }
