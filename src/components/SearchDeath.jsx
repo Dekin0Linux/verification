@@ -11,7 +11,7 @@ function SearchDeath() {
   const submitCode = (e) => {
     e.preventDefault();
 
-    fetch("/birth.json")
+    fetch("./birth.json")
       .then((res) => res.json())
       .then((data) => {
         let user = data.find((user) => user.entry_no === code);
@@ -26,7 +26,7 @@ function SearchDeath() {
           });
         }
     });
-    
+
   };
 
   return (
