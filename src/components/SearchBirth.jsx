@@ -9,6 +9,8 @@ function Search() {
   const [code, setCode] = useState("");
   const navigate = useNavigate();
 
+  window.onload='/'
+
   const submitCode = (e) => {
     e.preventDefault();
 
