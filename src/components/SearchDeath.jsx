@@ -9,6 +9,8 @@ function SearchDeath() {
   const navigate = useNavigate();
 
 
+  
+
   const submitCode = (e) => {
     e.preventDefault();
 
