@@ -18,6 +18,7 @@ function Search() {
         let user = data.find((user) => user.entry_no === code);
         if (user) {
           navigate(`/verify/${code}`);
+          setCode('')
         } else {
           swal({
             title: "Invalid Number",
@@ -66,6 +67,7 @@ function Search() {
                             placeholder="Enter Number"
                             onChange={(e) => setCode(e.target.value)}
                             className="inputs rounded"
+                            required
                           />
                         </div>
                       </div>

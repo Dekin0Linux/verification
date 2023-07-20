@@ -7,11 +7,15 @@ function Buttons() {
     const navigate = useNavigate()
 
     const activeTab = (tabname)=>{
-        setActive(tabname)
-        navigate(`/${tabname}`);
+        setActive(tabname);
+        console.log(tabname)
+        if(tabname == 'birth'){
+            navigate('/birth');
+        }else{
+            navigate('/death');
+        }
+       
     }
-
-    // onClick={() => navigate("/birth")}
 
   return (
     <div
@@ -19,13 +23,13 @@ function Buttons() {
       style={{ background: "#FAF8F8" }}
     >
       <div className="col-6" onClick={()=>activeTab('birth') } >
-        <div className={`bg-white p-md-4 p-3 btns rounded text-center ${active== 'birth' ? 'btn-1' : ''}` }>
+        <div className={`bg-white p-md-4 p-3 btns rounded text-center ${active === 'birth' ? 'btn-1' : ''}` }>
           Check for Birth
         </div>
       </div>
 
       <div className="col-6" onClick={()=>activeTab('death')}>
-        <div className={` p-md-4 p-3 btns rounded text-center ${active == 'death' ? 'btn-2' : ''}`}>
+        <div className={` p-md-4 p-3 btns rounded text-center ${active === 'death' ? 'btn-2' : ''}`}>
           Check for Death
         </div>
       </div>
