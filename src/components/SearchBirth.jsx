@@ -28,7 +28,7 @@ function Search() {
     //     }
     // });
 
-    fetch("./birth.json" ,{headers:{"Content-Type": "application/json"}})
+    fetch("../birth.json" , {headers:{"Content-Type": "application/json"}})
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
