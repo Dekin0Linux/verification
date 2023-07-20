@@ -36,7 +36,7 @@ function Search() {
         return res.json();
       })
       .then((data) => {
-        let user = data.find((user) => user.entry_no == code);
+        let user = data.birth.find((user) => user.entry_no == code);
 
         if (user) {
           navigate(`/verify/${code}`);
