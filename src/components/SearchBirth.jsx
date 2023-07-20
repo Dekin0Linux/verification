@@ -53,7 +53,7 @@ function Search() {
         }
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data:");
         // Handle the error here, display an error message, or take appropriate action.
       });
   };
