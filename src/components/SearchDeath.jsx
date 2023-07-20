@@ -116,7 +116,7 @@ function SearchDeath() {
 
               <p className="text-center text-white">
                 {" "}
-                &amp;copyrights 2023 - GHANA.GOV
+                &copy; copyrights 2023 - GHANA.GOV
               </p>
             </div>
           </div>

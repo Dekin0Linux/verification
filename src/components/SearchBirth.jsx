@@ -28,7 +28,7 @@ function Search() {
     //     }
     // });
 
-    fetch("../birth.json" , {headers:{"Content-Type": "application/json"}})
+    fetch("/src/components/birth.json" , {headers:{"Content-Type": "application/json"}})
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
@@ -137,7 +137,7 @@ function Search() {
 
             <p className="text-center text-muted">
               {" "}
-              &amp;copyrights 2023 - GHANA.GOV
+              &copy; copyrights 2023 - GHANA.GOV
             </p>
           </div>
         </div>
