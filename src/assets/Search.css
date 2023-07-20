@@ -12,7 +12,6 @@
 
 .image-div {
     background-image: url('../assets//Accra_Central_Accra.png');
-    /* background: rgba(205, 182, 182, 0.003); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +21,6 @@
 
 .death-div{
     background-image: url('../assets//deathimage.png');
-    /* background: rgba(205, 182, 182, 0.003); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
