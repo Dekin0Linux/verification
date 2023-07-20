@@ -57,7 +57,7 @@ function SearchDeath() {
             </div>
 
             {/* form container */}
-            <div className="p-4 m-0 p-0 mt-3" style={{background:"#2E2C26",color:"white"}}>
+            <div className="p-4 m-0 p-0 mt-3 rounded" style={{background:"#2E2C26",color:"white"}}>
               <div>
                 <h5 className="mb-0">Birth Certificate Verification System</h5>
                 <small className="fs-5 text-white p-0 m-0">
