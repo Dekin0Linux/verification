@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
 import Buttons from "./Buttons";
+import birthdata from './birth.json'
 
 function Search() {
   const [code, setCode] = useState("");
@@ -10,6 +11,19 @@ function Search() {
 
   const submitCode = (e) => {
     e.preventDefault();
+
+    let user = birthdata.birth.find((user) => user.entry_no == code);
+    if (user) {
+        navigate(`/verify/${code}`);
+      } else {
+        swal({
+          title: "Invalid Number",
+          text: "Please check your number and try again",
+          icon: "error",
+          button: "Cancel",
+        });
+    }
+
     // fetch("/birth.json")
     //   .then((res) => res.json())
     //   .then((data) => {
@@ -27,35 +41,35 @@ function Search() {
     //     }
     // });
 
-    fetch("../birth.json",{
-      headers:{
-        accept: 'application/json',
-        'User-agent': 'learning app',
-      }
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        let user = data.find((user) => user.entry_no == code);
-        if(user) {
-          navigate(`/verify/${code}`);
-        } else {
-          swal({
-            title: "Invalid Number",
-            text: "Please check your number and try again",
-            icon: "error",
-            button: "Cancel",
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:");
-        // Handle the error here, display an error message, or take appropriate action.
-      });
+    // fetch("../birth.json",{
+    //   headers:{
+    //     accept: 'application/json',
+    //     'User-agent': 'learning app',
+    //   }
+    // })
+    //   .then((res) => {
+    //     if (!res.ok) {
+    //       throw new Error("Network response was not ok");
+    //     }
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     let user = data.find((user) => user.entry_no == code);
+    //     if(user) {
+    //       navigate(`/verify/${code}`);
+    //     } else {
+    //       swal({
+    //         title: "Invalid Number",
+    //         text: "Please check your number and try again",
+    //         icon: "error",
+    //         button: "Cancel",
+    //       });
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching data:");
+        
+    //   });
   };
 
   return (
