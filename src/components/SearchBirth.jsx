@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
+import Buttons from "./Buttons";
+
 
 function Search() {
   const [code, setCode] = useState("");
@@ -16,14 +18,19 @@ function Search() {
         let user = data.find((user) => user.entry_no === code);
         if (user) {
           navigate(`/verify/${code}`);
+          setCode('')
         } else {
-          alert("Invalid Code!");
+          swal({
+            title: "Invalid Number",
+            text: "Please check your number and try again",
+            icon: "error",
+            button: "Cancel",
+          });
         }
-      });
+    });
   };
 
   return (
-    <>
       <div className="main-search">
         <div className="image-div position-relative">
           <div className="overlay w-100 h-100 bg-black bg-opacity-50"></div>
@@ -39,22 +46,7 @@ function Search() {
 
         <div className="input-div py-md-3 py-2 d-flex justify-content-center align-items-center">
           <div className="switchCard px-2 ">
-            <div
-              className="row py-4 rounded g-0 g-2 p-2"
-              style={{ background: "#FAF8F8" }}
-            >
-              <div className="col-6" onClick={()=>navigate('/birth')}>
-                <div className="bg-white p-md-4 p-3 btns rounded shadow text-center btn-1">
-                  Check for Birth
-                </div>
-              </div>
-
-              <div className="col-6" onClick={()=>navigate('/death')}>
-                <div className="bg-white p-md-4 p-3 btns btn-2 rounded text-center border">
-                  Check for Death
-                </div>
-              </div>
-            </div>
+            <Buttons/>
 
             {/* form container */}
             <div className="p-4 birth-form m-0 p-0 mt-3">
@@ -75,6 +67,7 @@ function Search() {
                             placeholder="Enter Number"
                             onChange={(e) => setCode(e.target.value)}
                             className="inputs rounded"
+                            required
                           />
                         </div>
                       </div>
@@ -121,10 +114,10 @@ function Search() {
 
               <p className="text-center text-muted"> &amp;copyrights 2023 - GHANA.GOV</p>
             </div>
+
           </div>
         </div>
       </div>
-    </>
   );
 }
 
