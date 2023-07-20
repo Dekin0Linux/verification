@@ -10,7 +10,6 @@ function Search() {
 
   const submitCode = (e) => {
     e.preventDefault();
-
     // fetch("/birth.json")
     //   .then((res) => res.json())
     //   .then((data) => {
@@ -28,7 +27,7 @@ function Search() {
     //     }
     // });
 
-    fetch("/src/components/birth.json" , {headers:{"Content-Type": "application/json"}})
+    fetch("/birth.json")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
@@ -36,9 +35,8 @@ function Search() {
         return res.json();
       })
       .then((data) => {
-        let user = data.birth.find((user) => user.entry_no == code);
-
-        if (user) {
+        let user = data.find((user) => user.entry_no == code);
+        if(user) {
           navigate(`/verify/${code}`);
         } else {
           swal({
