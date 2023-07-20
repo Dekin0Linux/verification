@@ -6,6 +6,7 @@ import "../assets/Search.css";
 function SearchDeath() {
   const [code, setCode] = useState("");
   const navigate = useNavigate();
+  const [active, setActive] = useState(true);
 
   const submitCode = (e) => {
     e.preventDefault();
@@ -21,6 +22,11 @@ function SearchDeath() {
         }
       });
   };
+
+
+ 
+
+
 
   return (
     <>
