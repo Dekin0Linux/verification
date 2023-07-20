@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { useNavigate,useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
 import Buttons from "./Buttons";
@@ -25,7 +25,8 @@ function SearchDeath() {
             button: "Cancel",
           });
         }
-      });
+    });
+    
   };
 
   return (

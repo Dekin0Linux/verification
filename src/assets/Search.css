@@ -36,10 +36,20 @@
 .btn-1, .birth-form{
     background-color: #DEF5EC !important;
 }
-.btn-2{
-    color: white !important;
-    background-color: #2E2C26 ;
+.btn-1-off{
+    background-color: white !important;
+    border: 1px solid rgb(197, 197, 197);
 }
+.btn-2 {
+    color: white !important;
+    background-color: #2E2C26 !important;
+}
+.btn-2-off{
+    background-color: white ;
+    border: 1px solid rgb(197, 197, 197);
+}
+
+
 /* .btn-2:hover{
     background-color: black !important;
     color: white !important;
@@ -74,4 +84,8 @@ button{
 .verify-btn{
     background-color: #427561 ;
     padding: 15px !important;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
