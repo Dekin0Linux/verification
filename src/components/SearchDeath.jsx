@@ -94,7 +94,7 @@ function SearchDeath() {
 
               {/* SCAN QR CODE */}
               <div className="m-0 p-0 py-1">
-                <p className=" text-muted">
+                <p className=" text-white">
                   Do not have a certificate number? <br /> Scan your QR code or
                   scan with finger print to get access
                 </p>
