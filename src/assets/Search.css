@@ -37,12 +37,13 @@
     background-color: #DEF5EC !important;
 }
 .btn-2{
-    color: #8D8D8D !important;
+    color: white !important;
+    background-color: #2E2C26 ;
 }
-.btn-2:hover{
+/* .btn-2:hover{
     background-color: black !important;
     color: white !important;
-}
+} */
 .btns{
     font-weight: bold;
     border-radius: 18px !important;
