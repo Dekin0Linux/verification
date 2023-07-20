@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { useNavigate,useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
 import Buttons from "./Buttons";
@@ -14,7 +14,7 @@ function SearchDeath() {
   const submitCode = (e) => {
     e.preventDefault();
 
-    fetch("/birth.json")
+    fetch("./birth.json")
       .then((res) => res.json())
       .then((data) => {
         let user = data.find((user) => user.entry_no === code);
@@ -28,7 +28,8 @@ function SearchDeath() {
             button: "Cancel",
           });
         }
-      });
+    });
+
   };
 
 
@@ -123,7 +124,7 @@ function SearchDeath() {
 
               <p className="text-center "  style={{color:"#000000"}} >
                 {" "}
-                &amp;copyrights 2023 - GHANA.GOV
+                &copy; copyrights 2023 - GHANA.GOV
               </p>
             </div>
           </div>
