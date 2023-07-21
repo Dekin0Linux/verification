@@ -25,7 +25,7 @@ function Doc() {
         
     // })
 
-    let user = birthdata.birth.find((user) => user.entry_no == entry);
+    let user = birthdata.birth.find((user) => user.entry_no == entry  ||   user.child_name == entry);
     if (user) {
         setCert(user)
       } else {

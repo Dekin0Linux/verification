@@ -8,6 +8,9 @@ function SearchDeath() {
   const [code, setCode] = useState("");
   const navigate = useNavigate();
 
+
+  
+
   const submitCode = (e) => {
     e.preventDefault();
 
@@ -28,6 +31,11 @@ function SearchDeath() {
     });
 
   };
+
+
+ 
+
+
 
   return (
     <>
@@ -51,11 +59,11 @@ function SearchDeath() {
             {/* form container */}
             <div
               className="p-4 m-0 p-0 mt-3 rounded"
-              style={{ background: "#2E2C26", color: "white" }}
+              style={{ background: "#2E2C2633", color: "#000000" }}
             >
               <div>
                 <h5 className="mb-0">Birth Certificate Verification System</h5>
-                <small className="fs-5 text-white p-0 m-0">
+                <small className="fs-5  p-0 m-0" >
                   Death Certificate Verification System details below
                 </small>
 
@@ -77,7 +85,7 @@ function SearchDeath() {
                         <button
                           type="submit"
                           className="w-100 m-0 p-0 p-2 verify-btn text-white fw-bold rounded"
-                          style={{background:'#EA5E5E'}}
+                          style={{background:'#000000'}}
                         >
                           Verify
                         </button>
@@ -88,14 +96,14 @@ function SearchDeath() {
               </div>
 
               {/* SCAN QR CODE */}
-              <div className="m-0 p-0 py-1">
-                <p className=" text-white">
+              <div className="m-0 p-0 py-1"  >
+                <p  style={{color:"#000000"}} >
                   Do not have a certificate number? <br /> Scan your QR code or
                   scan with finger print to get access
                 </p>
                 <button
                   className="w-100 text-white rounded fw-bold lead"
-                  style={{ background: "#EA5E5E" }}
+                  style={{ background: "#000000" }}
                 >
                   Scan QR Code
                 </button>
@@ -105,16 +113,16 @@ function SearchDeath() {
                 <p className="text-center">Or</p>
                 <button
                   className="w-100 text-white rounded fw-bold lead m-0"
-                  style={{ background: "#EA5E5E" }}
+                  style={{ background: "#000000" }}
                 >
                   Scan Finger Print
                 </button>
-                <p className=" text-white">
+                <p  style={{color:"#000000"}} >
                   Having issues? Contact our customer service for more details.
                 </p>
               </div>
 
-              <p className="text-center text-white">
+              <p className="text-center "  style={{color:"#000000"}} >
                 {" "}
                 &copy; copyrights 2023 - GHANA.GOV
               </p>

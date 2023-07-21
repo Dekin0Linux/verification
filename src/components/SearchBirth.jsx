@@ -9,10 +9,14 @@ function Search() {
   const [code, setCode] = useState("");
   const navigate = useNavigate();
 
+
   const submitCode = (e) => {
     e.preventDefault();
 
-    let user = birthdata.birth.find((user) => user.entry_no == code);
+    let user = birthdata.birth.find((user) => user.entry_no == code ||   user.child_name == code) ;
+
+
+    
     if (user) {
         navigate(`/verify/${code}`);
       } else {

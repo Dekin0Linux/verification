@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Homepage from './pages/Homepage'
@@ -7,6 +7,9 @@ import SearchDeath from './components/SearchDeath'
 import Search from './components/SearchBirth'
 
 function App() {
+
+
+
   return (
     <div>
       <Router>
@@ -15,7 +18,7 @@ function App() {
           <Route path='/verify/:entry' element={<Doc/>} />
           <Route path='/birth' element={<Search/>} />
           <Route path='/death' element={<SearchDeath/>} />
-          <Route path='*' element={<Error/>} />
+          <Route path='*' element={<Homepage/>} />
         </Routes>
       </Router>
     </div>
