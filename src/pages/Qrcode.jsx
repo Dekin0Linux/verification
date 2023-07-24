@@ -24,7 +24,7 @@ function Qrcode() {
 
   return (
     <div className="App">
-       <h1>Qr code scanning in React</h1>
+       <h5>Qr code scanning</h5>
       {scanResult
         ? <div> Success: <a href={scanResult}>{scanResult}</a></div>
         : <div id="reader"></div>
