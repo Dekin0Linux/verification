@@ -2,11 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
+import Qrcode  from "../pages/Qrcode"
+import {Modal,Button} from 'react-bootstrap';
 import Buttons from "./Buttons";
 import birthdata from './birth.json'
 
-function Search() {
+function Search(props) {
   const [code, setCode] = useState("");
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   const navigate = useNavigate();
 
 
@@ -137,9 +146,10 @@ function Search() {
               </p>
               <button
                 className="w-100 text-white rounded fw-bold lead"
-                style={{ background: "#427561" }}
+                style={{ background: "#427561" }} onClick={handleShow}
               >
                 Scan QR Code
+              
               </button>
             </div>
 
@@ -163,6 +173,23 @@ function Search() {
           </div>
         </div>
       </div>
+
+
+      <Modal show={show} onHide={handleClose} animation={false}>
+       
+        <Modal.Body>
+          <Qrcode/>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </div>
   );
 }
