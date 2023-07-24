@@ -2,10 +2,13 @@ import React, { useState,useEffect } from "react";
 import { useNavigate,useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Search.css";
+// import  Qrcodomodale from '../pages/Qrcodemodal'
 import Buttons from "./Buttons";
 
 function SearchDeath() {
   const [code, setCode] = useState("");
+
+ 
   const navigate = useNavigate();
 
 
@@ -113,8 +116,10 @@ function SearchDeath() {
                 <p className="text-center">Or</p>
                 <button
                   className="w-100 text-white rounded fw-bold lead m-0"
-                  style={{ background: "#000000" }}
+                  style={{ background: "#000000" }} 
+
                 >
+                
                   Scan Finger Print
                 </button>
                 <p  style={{color:"#000000"}} >
