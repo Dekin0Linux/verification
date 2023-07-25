@@ -6,14 +6,24 @@ import Qrcode  from "../pages/Qrcode"
 import {Modal,Button} from 'react-bootstrap';
 import Buttons from "./Buttons";
 import birthdata from './birth.json'
+// import Docmodal from "./Docmodal";
 
 function Search(props) {
   const [code, setCode] = useState("");
-
   const [show, setShow] = useState(false);
+  
+  // const [modalShow, setModalShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // const handleShowModal = () => {
+  //   setModalShow(true);
+  // };
+
+  // const handleHideModal = () => {
+  //   setModalShow(false);
+  // };
 
 
   const navigate = useNavigate();
@@ -129,9 +139,12 @@ function Search(props) {
                       <button
                         type="submit"
                         className="w-100 m-0 p-0 p-2 verify-btn text-white fw-bold rounded"
+                        
                       >
                         Verify
                       </button>
+                      {/* onClick={handleShowModal}
+                      <Docmodal show={modalShow} onHide={handleHideModal}/> */}
                     </div>
                   </div>
                 </form>
