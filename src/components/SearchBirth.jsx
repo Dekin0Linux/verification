@@ -6,14 +6,26 @@ import Qrcode  from "../pages/Qrcode"
 import {Modal,Button} from 'react-bootstrap';
 import Buttons from "./Buttons";
 import birthdata from './birth.json'
+import Docmodal from "./Docmodal";
 
 function Search(props) {
   const [code, setCode] = useState("");
-
   const [show, setShow] = useState(false);
+  
+
+
+  const [modalShow, setModalShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleShowModal = () => {
+    setModalShow(true);
+  };
+
+  const handleHideModal = () => {
+    setModalShow(false);
+  };
 
 
   const navigate = useNavigate();
@@ -24,7 +36,7 @@ function Search(props) {
 
     let user = birthdata.birth.find((user) => user.entry_no == code ||   user.child_name == code) ;
 
-
+    
     
     if (user) {
         navigate(`/verify/${code}`);
@@ -112,26 +124,30 @@ function Search(props) {
 
               <div className="py-md-3 py-2">
                 <form onSubmit={submitCode}>
-                  <div className="row m-0 p-0 g-3">
+                  <div className="m-0 g-3 main-input">
                     <div className="col-md-8 m-0 ps-md-0 ">
-                      <div className="p-0">
-                        <input
+                      <div className="p-0 mb-2 mb-md-0">
+                        <input 
                           type="text"
                           placeholder="Enter Number"
                           onChange={(e) => setCode(e.target.value)}
-                          className="inputs rounded"
+                          className="inputs rounded  verify-input "
                           required
                         />
                       </div>
                     </div>
 
-                    <div className="col-md-4 m-0 p-0">
+                    <div className="col-md-4 m-0 p-0 ">
                       <button
+                    
                         type="submit"
-                        className="w-100 m-0 p-0 p-2 verify-btn text-white fw-bold rounded"
+                        className="w-100 m-0 p-0 p-3  verify-btn text-white fw-bold rounded"
+                        // onClick={handleShowModal}
                       >
                         Verify
                       </button>
+                     
+                     {/* <Docmodal lgshow={modalShow} onHide={handleHideModal} /> */}
                     </div>
                   </div>
                 </form>

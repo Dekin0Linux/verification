@@ -89,3 +89,30 @@ a{
     text-decoration: none;
     color: black;
 }
+
+
+.main-input{
+    display: flex;
+    gap: 3%;
+    padding-right: 10% !important;
+}
+
+@media only screen and (max-width : 980px) {
+    .main-input{
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        gap: 3%;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    .verify-input{
+        
+        margin-right: 40%;
+        width: 100%;
+    }
+    .verify-btn {
+        margin-bottom: 20px;
+    }
+    }
