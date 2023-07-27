@@ -1,10 +1,17 @@
 import React from "react";
 import "../assets/Registery.css";
 import ghana from "../assets/ghana.png";
-import qrcodeImage from '../assets/qrcode3501.png'
 import finger from "../assets/fingeer.png";
 
+
+
+
+
+
 function Cert({ selectedData }) {
+
+ 
+ 
   return (
     <div className="">
       <div className="row">
@@ -103,7 +110,7 @@ function Cert({ selectedData }) {
               </div>
             </div>
             <div className="col-md-3 col-6 order-2 order-md-3 text-center align-item-center border-start p-2 m-0 p-0">
-              <img src={selectedData.qr_code } className="qr-code" />
+              <img src={selectedData.qr_code} className="qr-code" />
             </div>
           </div>
 
@@ -158,8 +165,8 @@ function Cert({ selectedData }) {
 
           <div className="row">
             <div className="col-md-3 col-4 border fw-bold p-2">Margin</div>
-            <div className="col-md-9 col-8 border Data-born p-2" >
-           <p   style={{width:"100"}}> {selectedData.margin}</p>
+            <div className="col-md-9 col-8 border Data-born p-2  text-wrap" >
+           <p  className="text-wrap overflow-auto"  style={{width:"100%"}}> {selectedData.margin}</p>
             </div>
           </div>
 

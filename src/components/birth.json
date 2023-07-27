@@ -19,7 +19,8 @@
       "margin": "DRA/0001/222/10/15/7444/RRA/22/10/15/11653",
       "code_A": "1373499",
       "num_code": "000105-3501-2011",
-      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3501&chs=180x180&choe=UTF-8&chld=L|2"
+      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3501&chs=180x180&choe=UTF-8&chld=L|2",
+      "link": "https://verification-lime.vercel.app/verify/3501"
     },
     {
       "entry_no": "3502",
@@ -40,7 +41,8 @@
       "margin": "DRA/0001/222/10/15/7444/RRA/22/10/15/11653",
       "code_A": "1073499",
       "num_code": "000205-3201-2012",
-      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3502&chs=180x180&choe=UTF-8&chld=L|2"
+      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3502&chs=180x180&choe=UTF-8&chld=L|2",
+      "link": "https://verification-lime.vercel.app/verify/3502"
     },
     {
       "entry_no": "3503",
@@ -61,7 +63,8 @@
       "margin": "DRA/0001/222/10/15/7444/RRA/22/10/15/11653",
       "code_A": "1073499",
       "num_code": "000303-3501-2013",
-      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3503&chs=180x180&choe=UTF-8&chld=L|2"
+      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3503&chs=180x180&choe=UTF-8&chld=L|2",
+      "link": "https://verification-lime.vercel.app/verify/3503"
     },
     {
       "entry_no": "3504",
@@ -82,7 +85,8 @@
       "margin": "DRA/0001/222/10/15/7444/RRA/22/10/15/11653",
       "code_A": "4073449",
       "num_code": "000405-4501-2014",
-      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3504&chs=180x180&choe=UTF-8&chld=L|2"
+      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3504&chs=180x180&choe=UTF-8&chld=L|2",
+      "link": "https://verification-lime.vercel.app/verify/3504"
     },
     {
       "entry_no": "3505",
@@ -103,7 +107,8 @@
       "margin": "DRA/0001/222/10/15/7444/RRA/22/10/15/11653",
       "code_A": "5034789",
       "num_code": "000505-6501-2015",
-      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3505&chs=180x180&choe=UTF-8&chld=L|2"
+      "qr_code":"https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fverification-lime.vercel.app%2Fverify%2F3505&chs=180x180&choe=UTF-8&chld=L|2",
+      "link": "https://verification-lime.vercel.app/verify/3505"
     }
   ]
 }
