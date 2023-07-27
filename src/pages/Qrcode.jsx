@@ -33,8 +33,9 @@ function Qrcode() {
           icon: "error",
           button: "Cancel",
         });
-        navigate('/')
-        error()
+        
+        window.location.href= `/`
+        scanner.clear()
     }
      
     }
