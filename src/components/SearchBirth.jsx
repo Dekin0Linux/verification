@@ -8,25 +8,22 @@ import Buttons from "./Buttons";
 import birthdata from './birth.json'
 import Docmodal from "./Docmodal";
 
-function Search(props) {
+function Search() {
   const [code, setCode] = useState("");
   const [show, setShow] = useState(false);
   
 
 
-  const [modalShow, setModalShow] = useState(false);
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleShowModal = () => {
-    setModalShow(true);
+  const handleQRCodeSuccess = (result) => {
+    setShow(false); // Close the modal when the QR code scanning is successful
+    setCode(result); // Update the code state with the scanned result
+    console.log(result)
   };
-
-  const handleHideModal = () => {
-    setModalShow(false);
-  };
-
 
   const navigate = useNavigate();
 
@@ -49,63 +46,18 @@ function Search(props) {
         });
     }
 
-    // fetch("/birth.json")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     let user = data.find((user) => user.entry_no == code);
-
-    //     if (user) {
-    //       navigate(`/verify/${code}`);
-    //     } else {
-    //       swal({
-    //         title: "Invalid Number",
-    //         text: "Please check your number and try again",
-    //         icon: "error",
-    //         button: "Cancel",
-    //       });
-    //     }
-    // });
-
-    // fetch("../birth.json",{
-    //   headers:{
-    //     accept: 'application/json',
-    //     'User-agent': 'learning app',
-    //   }
-    // })
-    //   .then((res) => {
-    //     if (!res.ok) {
-    //       throw new Error("Network response was not ok");
-    //     }
-    //     return res.json();
-    //   })
-    //   .then((data) => {
-    //     let user = data.find((user) => user.entry_no == code);
-    //     if(user) {
-    //       navigate(`/verify/${code}`);
-    //     } else {
-    //       swal({
-    //         title: "Invalid Number",
-    //         text: "Please check your number and try again",
-    //         icon: "error",
-    //         button: "Cancel",
-    //       });
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error fetching data:");
-        
-    //   });
   };
 
   return (
     <div className="main-search">
       <div className="image-div position-relative">
         <div className="overlay w-100 h-100 bg-black bg-opacity-50"></div>
-        <div className="position-absolute top-50 start-50 translate-middle  text-white d-md-flex text-center d-block align-items-center gap-md-2">
-          <div>
+        <div className="position-absolute top-50 start-50 translate-middle  text-white d-md-flex text-center d-block align-items-center gap-md-2 w-100    " >
+          <div className=" w-100 d-md-flex  justify-content-md-center align-items-center  text-center d-block   ">
             <img src={logo} alt="" className="img-fluid" />
+            <h2 className="fw-bold display-5  ">Ghana Births and Deaths Registry   </h2>
           </div>
-          <h2 className="fw-bold display-5">Ghana Birth and Death Registry</h2>
+         
         </div>
       </div>
 
@@ -191,17 +143,19 @@ function Search(props) {
       </div>
 
 
-      <Modal show={show} onHide={handleClose} animation={false}>
-       
-        <Modal.Body>
-          <Qrcode/>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <Modal show={show}  onHide={handleClose} animation={false}>
+      <Qrcode onSuccess={handleQRCodeSuccess}  closeModal={handleClose}/>
+      {/* <Modal.Body> */}
+        {/* Pass the onSuccess prop here */}
+        {/* <Qrcode onSuccess={handleQRCodeSuccess}  /> */}
+      {/* </Modal.Body> */}
+      {/* <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+          Close
+        </Button>
+      </Modal.Footer> */}
+    </Modal>
+
 
     </div>
   );
