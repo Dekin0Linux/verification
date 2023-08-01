@@ -50,7 +50,7 @@ function SearchDeath() {
               <img src={logo} alt="" className="img-fluid" />
             </div>
             <h2 className="fw-bold display-5">
-              Ghana Births and Deaths Registry
+            Ghana Births and Deaths Registry
             </h2>
           </div>
         </div>
@@ -58,7 +58,6 @@ function SearchDeath() {
         <div className="input-div py-md-3 py-2 d-flex justify-content-center align-items-center">
           <div className="switchCard px-2 ">
             <Buttons />
-
             {/* form container */}
             <div
               className="p-4 m-0 p-0 mt-3 rounded"
@@ -70,11 +69,11 @@ function SearchDeath() {
                   Death Certificate Verification System details below
                 </small>
 
-                <div className="py-md-3 py-2">
+                <div className="py-md-3  py-2">
                   <form onSubmit={submitCode}>
-                    <div className="row m-0 p-0 g-3">
+                    <div className=" m-0 p-0 g-3 main-input">
                       <div className="col-md-8 m-0 ps-md-0 ">
-                        <div className="p-0">
+                        <div className="p-0 mb-2 mb-md-0">
                           <input
                             type="text"
                             placeholder="Enter Number"

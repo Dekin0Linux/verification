@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import birthdata from '../components/birth.json'
 import { useNavigate } from 'react-router-dom';
 
-function Qrcode() {
+function Qrcode(props) {
   const [scanResult, setScanResult] = useState(null); 
   const navigate = useNavigate()
 
@@ -24,8 +24,9 @@ function Qrcode() {
       if(user){
         scanner.clear();
         setScanResult(result);
+        
         window.location.href= `${result}`
-
+ 
       }else {
         swal({
           title: "Invalid Number",
@@ -33,8 +34,10 @@ function Qrcode() {
           icon: "error",
           button: "Cancel",
         });
-        
-        window.location.href= `/`
+
+       
+        // alert('invalid data')
+        // window.location.href= `/`
         scanner.clear()
     }
      
@@ -47,11 +50,12 @@ function Qrcode() {
 
   return (
     <div className="App">
-       <h5>Qr code scanning</h5>
+       {/* <h5>Qr code scanning</h5>
       {scanResult
         ? <div> Success: <a href={scanResult}>{scanResult}</a></div>
         : <div id="reader"></div>
-      } 
+      }  */}
+      <div id="reader"></div>
     </div>
   );
 }
